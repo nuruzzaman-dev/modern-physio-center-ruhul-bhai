@@ -1,68 +1,45 @@
-# Design Direction — মডার্ন ফিজিওথেরাপি সেন্টার
+# Revised Design Direction — “চিকিৎসার নোটবুক”
 
-## Three initial directions
+## Why this revision is different
 
-### Theme Name: নীরব নিরাময়
-Very Brief Intro: একটি শান্ত, সম্পাদকীয় স্বাস্থ্য-পরিচয় যেখানে উষ্ণ ক্রিম, অলিভ ও স্যান্ড রঙ রোগীকে স্বস্তি এবং বিশ্বাসের অনুভূতি দেয়।
-Probability: 0.07
+The previous version used a calm olive-and-cream editorial landing pattern. This revision moves to a **field-notes / humanist clinical journal** system: stronger color blocking, a left-side index rail, typographic labels, offset paper panels, horizontal problem navigation, an asymmetric gallery, and a treatment process that reads like a practical care pathway rather than a standard landing-page scroll.
 
-### Theme Name: চলনের রেখা
-Very Brief Intro: শরীরের গতি, পুনর্বাসন এবং অগ্রগতিকে বাঁকানো রেখা, রিদমিক টাইপোগ্রাফি ও গতিশীল স্ক্রল-ভিজ্যুয়ালের মাধ্যমে প্রকাশ করা একটি আধুনিক দিক।
-Probability: 0.04
+## Color philosophy
 
-### Theme Name: স্থানীয় আলো
-Very Brief Intro: মুক্তাগাছার স্থানীয় পরিচয়কে প্রিমিয়াম ক্লিনিক্যাল ডিজাইনের সঙ্গে মিশিয়ে সহজ, মানবিক এবং পরিচিত একটি ডিজিটাল অভিজ্ঞতা।
-Probability: 0.02
+The main canvas is **Linen `#F3EEE6`**, kept warm but less monochromatic than the previous cream. **Burnt Terracotta `#B85C45`** becomes the ownable action color, bringing human warmth and local character to appointment actions. **Ink Navy `#1F2B3A`** replaces forest charcoal for clinical readability and a sharper editorial contrast. Supporting tones are **Powder Blue `#C5D5D9`**, **Dusty Apricot `#E6B49E`**, and **Ochre `#C6943B`**. There are no blue healthcare gradients, neon accents, glass surfaces, or generic green medical cues.
 
-## Chosen direction: নীরব নিরাময়
+The approximate balance is 50–60% linen and neutral space, 15–20% white paper surfaces, 10–15% ink navy, 8–12% terracotta, and 5–8% powder blue/apricot/ochre accents.
 
-### Design Movement
-Contemporary editorial healthcare design with the restraint of Scandinavian interiors and the warmth of local print culture. The interface should feel composed, quiet and tactile rather than clinical-template or startup-like.
+## Layout paradigm
 
-### Core Principles
-1. **Trust through restraint:** generous whitespace, clear information hierarchy and no exaggerated claims.
-2. **Human before institutional:** photography and copy should show care, presence and local accessibility.
-3. **Editorial rhythm:** sections should vary in composition—profile, horizontal lists, timeline, FAQ and location—rather than repeating card grids.
-4. **Motion with purpose:** animation should guide attention and reveal content, never compete with the patient's need for clarity.
+Use a **vertical clinical index rail** on desktop and a compact section stamp on mobile. The page should feel like a well-organized treatment notebook: each major section gets a code, a short Bangla label, and a distinct composition. The hero is a full-width editorial cover with an image inset rather than a normal split-screen. Services become a horizontally navigable condition band. Trust features use a numbered paper strip. The rehab feature is a dark ink spread. Treatment becomes a plotted four-step pathway. Gallery uses a staggered masonry-like composition. Contact ends as a bold appointment desk panel with an embedded map fallback.
 
-### Color Philosophy
-Warm Cream `#F5F1E8` is the primary canvas because it lowers visual tension and makes the clinic feel welcoming. Deep Olive `#39483A` carries trust and action without defaulting to medical blue. Forest Charcoal `#26352B` grounds high-contrast moments. Soft Sand `#E5DED0` and Muted Sage `#879887` add tactile variation sparingly, like paper and foliage in a calm treatment room.
+## Signature elements
 
-### Layout Paradigm
-Use an off-center editorial flow: a wide hero with a narrow text rail and image-led counterweight, staggered content blocks, horizontal service bands and a split location/footer composition. Avoid a page made from centered headline-plus-three-card modules.
+The recurring visual language is a **terracotta care stamp**, **thin navy notebook rules**, **index numbers**, **small corner crop marks**, and **paper cards that look placed rather than uniformly rounded**. Rounded corners are used only for media and primary action controls; most informational blocks use square or lightly clipped edges.
 
-### Signature Elements
-- Thin olive route-lines and small numbered markers that suggest rehabilitation progress.
-- Cream paper surfaces with subtle stone rules and offset image frames.
-- A compact circular brand mark built from two offset arcs, symbolizing movement returning to balance.
+## Typography system
 
-### Interaction Philosophy
-Interactions should feel like a calm hand guiding the patient. Buttons respond with a short press and lift, navigation highlights remain understated, and accordions open with measured ease. Important actions—calling, finding the location and requesting an appointment—should always remain obvious and reachable.
+Keep Noto Sans Bengali for readable content, but use a stronger typographic contrast: oversized ink navy display headings, terracotta italic emphasis, and compact uppercase-like Bangla section stamps. Body copy remains generous and calm. Avoid repeating the same large heading size in every section; use a mix of display, medium editorial, and compact utility levels.
 
-### Animation
-Use Framer Motion for component entrances, mobile navigation and accordion state. Use GSAP with ScrollTrigger for a single restrained editorial reveal sequence and a gently drawing route-line motif. Prefer opacity, translate, clip-path and scale; avoid bouncing, heavy parallax, aggressive zoom and perpetual floating. Respect `prefers-reduced-motion` by disabling non-essential sequences.
+## Motion system
 
-### Typography System
-Use `Noto Sans Bengali` for all visible text with generous line-height. Headlines should use 600–700 weight and tight but readable measure; supporting copy should use 400–500 weight and a max width of roughly 36–44 characters on mobile. Small labels use 500 weight with slight tracking and sentence-like capitalization in Bangla.
+Framer Motion handles the mobile drawer, problem-chip focus states, accordion, and paper-panel entrances. GSAP ScrollTrigger handles only the hero cover reveal, the treatment process line drawing, and one rehab image clip reveal. The route-line motif from the previous design is replaced by notebook rules and a plotted care-path line. All non-essential motion is disabled under reduced motion.
 
-### Brand Essence
-আপনার কাছেই নির্ভরযোগ্য ফিজিওথেরাপি ও পুনর্বাসন সেবা—মুক্তাগাছার মানুষদের জন্য যত্নশীল, আধুনিক ও দায়িত্বশীল চিকিৎসা-সহায়তা।
+## Brand essence
 
-Personality: **শান্ত, যত্নশীল, নির্ভরযোগ্য**
+**আপনার সমস্যাকে বুঝে, চলাফেরার পথে বাস্তব সহায়তা।**
 
-### Brand Voice
-Headlines are clear, warm and locally grounded. CTAs are direct without pressure. Microcopy answers the patient's next question instead of making broad promises.
+Personality: **মানবিক, দায়িত্বশীল, স্পষ্ট**
 
-Example lines:
-- “চলাফেরার স্বাচ্ছন্দ্য ফিরে পাওয়ার পথে পাশে আছি।”
-- “আপনার সমস্যাটি বলুন—সঠিক সেবার দিকে আপনাকে গাইড করব।”
+## Brand voice
 
-### Wordmark & Logo
-The mark is a bold, text-free circular symbol formed by two offset olive arcs and a small central opening, suggesting a joint in motion and a return to balance. The Bangla wordmark sits beside it in a calm, medium-weight lockup rather than a default bold treatment.
+Headlines should sound like a clinician who explains clearly, not a marketer who promises outcomes. CTAs should be immediate and practical. Example lines: “সমস্যাটি বলুন, পরের পদক্ষেপটি বুঝে নিন।” and “আপনার সুবিধামতো সেবা সম্পর্কে জানতে ফোন করুন।”
 
-### Signature Brand Color
-**Deep Olive `#39483A`** — the ownable color that connects clinical confidence with the grounded warmth of local care.
+## Wordmark and mark
 
-## Implementation reminders
+Use a text-free **care-stamp symbol** built from a terracotta square stamp with a navy open joint-line inside. The wordmark is a two-line Bangla lockup with a small terracotta index number, making it feel like a local practice identity rather than a generic icon plus text.
 
-Every edited component should reinforce the chosen direction. Keep visible copy 100% Bangla. Do not invent reviews, ratings, patient counts or testimonials. Treat all generated/stock imagery as illustrative temporary material, never as the actual clinic, therapist or patient. Keep hero and service imagery replaceable through named constants. Use GSAP and Framer Motion only where they improve hierarchy or comprehension.
+## Non-negotiable content coverage
+
+The revised page must include: hero, four trust indicators, ten problem chips, five reasons to choose the center, full conditions list, paralysis and rehabilitation explanation, exact physiotherapist profile, four-step treatment process, home physiotherapy conversion section, future video placeholder, centralized image configuration, asymmetric gallery, no-fake-testimonial placeholder, all seven FAQs, contact details, responsive map fallback, mobile sticky CTA, SEO metadata, accessible semantics, responsible medical wording, and explicit temporary-image labels.
