@@ -15,3 +15,10 @@
 - [x] Replace the horizontal problem scroller with a polished responsive grid/index composition.
 - [x] Preserve all ten supplied problem labels and clear links to the services section.
 - [x] Verify mobile and desktop spacing, readability, and interaction states.
+
+## Mobile-First Responsive Audit
+
+- [x] Check 360px, 390px, and 430px layouts for overflow, clipping, image crops, menu behavior, and sticky CTA coverage.
+- [x] Check desktop continuity at 1280px after mobile verification.
+- [x] Apply only responsive fixes if an issue is found, without changing the established visual design.
+- [x] Save the verified responsive state as the latest checkpoint.
