@@ -58,10 +58,17 @@ button:focus-visible, a:focus-visible, [tabindex]:focus-visible { outline: 2px s
 .problem-section, .services-section, .conditions-section, .therapist-section, .process-section, .media-section, .gallery-section, .faq-section { padding: var(--section-space) 0; }
 .problem-section { background: #c5d5d9; }
 .problem-section .section-heading { max-width: 800px; }
-.problem-scroller { display: flex; gap: .7rem; overflow-x: auto; margin-top: 3rem; padding: .3rem 0 1.3rem; scrollbar-color: #b85c45 transparent; }
-.problem-chip { display: flex; min-width: max-content; align-items: center; gap: .7rem; border: 1px solid rgba(31,43,58,.28); padding: .95rem 1rem; color: #1f2b3a; font-size: .74rem; font-weight: 700; transition: color .2s ease, background .2s ease, transform .2s ease; }
-.problem-chip span { color: #b85c45; font-size: .62rem; }
-.problem-chip:hover { background: #1f2b3a; color: white; transform: translateY(-3px); }
+.problem-index { display: grid; grid-template-columns: 1fr 1fr; gap: 0 1.2rem; margin-top: 3rem; border-top: 1px solid rgba(31,43,58,.3); }
+@media (min-width: 760px) { .problem-index { grid-template-columns: repeat(5, 1fr); gap: 0; border-bottom: 1px solid rgba(31,43,58,.3); } }
+.problem-chip { position: relative; display: grid; min-height: 82px; grid-template-columns: auto 1fr auto; align-items: center; gap: .55rem; border-bottom: 1px solid rgba(31,43,58,.22); padding: .9rem .4rem .9rem 0; color: #1f2b3a; font-size: .72rem; transition: color .2s ease, background .2s ease, padding .2s ease; }
+@media (min-width: 760px) { .problem-chip { min-height: 118px; border-right: 1px solid rgba(31,43,58,.2); border-bottom: 0; padding: 1rem .85rem; } .problem-chip:last-child { border-right: 0; } }
+.problem-chip::before { content: ''; position: absolute; left: 0; top: 0; height: 2px; width: 0; background: #b85c45; transition: width .25s ease; }
+.problem-chip:hover { background: rgba(255,253,249,.4); color: #b85c45; padding-left: .6rem; }
+.problem-chip:hover::before { width: 100%; }
+.problem-chip svg { color: #b85c45; opacity: .65; transition: transform .2s ease; }
+.problem-chip:hover svg { transform: translate(2px, -2px); }
+.problem-chip strong { font-size: .74rem; font-weight: 700; line-height: 1.55; }
+.problem-index-number { color: #b85c45; font-size: .6rem; font-weight: 700; }
 .services-section { background: #fffdf9; }
 .services-intro { display: grid; gap: 1.5rem; margin-bottom: 3rem; }
 @media (min-width: 760px) { .services-intro { grid-template-columns: 1fr .7fr; align-items: end; } }
