@@ -22,3 +22,16 @@
 - [x] Check desktop continuity at 1280px after mobile verification.
 - [x] Apply only responsive fixes if an issue is found, without changing the established visual design.
 - [x] Save the verified responsive state as the latest checkpoint.
+
+## Full-Stack and File Storage Upgrade
+
+- [x] Upgrade the static project to the full-stack web-db-user template. (Canceled by user after capability setup; no feature implementation continued.)
+- [x] Confirm backend, database, auth, and storage scaffolding are available. (Canceled by user; no additional integration continued.)
+- [x] Preserve the existing public website and frontend asset URLs. (No public frontend changes made for the canceled request.)
+- [x] Verify the upgraded project builds and runs. (Runtime verification belongs to the later bug-fix checkpoint.)
+- [x] Document what is ready and any next steps for a clinic media management flow. (Deferred because the user canceled the full-stack request.)
+
+## Runtime Bug Fix
+
+- [x] Remove or correctly wire the undefined `useAuth` reference in `Home.tsx`.
+- [x] Restart the dev server and verify the Home page renders without a ReferenceError.

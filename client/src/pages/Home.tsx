@@ -76,6 +76,7 @@ function Stamp({ text }: { text: string }) { return <span className="stamp">{tex
 function SectionStamp({ number, label }: { number: string; label: string }) { return <div className="section-stamp"><b className="mini-care-stamp" aria-hidden="true"><i /></b><span className="section-number">{number}</span><span>{label}</span></div>; }
 
 export default function Home() {
+
   const [menuOpen, setMenuOpen] = useState(false);
   const [faqOpen, setFaqOpen] = useState<number | null>(0);
   const processLine = useRef<SVGPathElement>(null);
