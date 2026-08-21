@@ -35,3 +35,11 @@
 
 - [x] Remove or correctly wire the undefined `useAuth` reference in `Home.tsx`.
 - [x] Restart the dev server and verify the Home page renders without a ReferenceError.
+
+## MPC Logo and New Content Update
+
+- [x] Read and map every section of `pasted_content_2.txt`.
+- [x] Add the supplied MPC logo to the existing website asset configuration.
+- [x] Replace the current header/footer branding mark with the supplied logo.
+- [x] Update visible website copy only where supported by the newly supplied content.
+- [x] Verify responsive rendering and save the updated existing-project checkpoint.
